@@ -1,0 +1,210 @@
+#snaplog_logo {
+  height: auto;
+  weight: auto;
+  max-width: 200px;
+  max-height: 200px;
+  margin-top: -15px;
+}
+
+.option {
+  text-align: center;
+  color: #37474f;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+
+.option:hover {
+  color:#ff8f00;
+}
+
+h5 {
+  color: #37474f;
+}
+.header_text {
+  margin-top: 80px;/*80px*/
+  text-align: center;
+  color: #37474f;
+  padding-left: 30px;
+}
+
+@media only screen and (min-height: 900px) and (max-height: 1080px) {
+  .header_text {
+    margin-top: 10  0px;/*80px*/
+    text-align: center;
+    color: #37474f;
+    padding-left: 30px;
+  } 
+}
+
+
+#verticalLine{
+  border-left: thick solid #ef6c00;
+}
+@media only screen and (min-height: 900px) and (max-height: 1080px) {
+  #verticalLine {
+    border-left: thick solid #ef6c00;
+    padding-right: 150px;
+  }
+}
+
+#paddingRight{
+  padding-right: 130px;
+}
+
+/*added*/
+.divider {
+  margin-top: 330px;/**/
+}
+@media only screen and (max-height: 760px) {
+  .divider {
+    margin-top: 230px;/**/
+  }
+}
+@media only screen and (min-height: 900px) and (max-height: 1080px) {
+  .divider {
+    margin-top: 540px;/**/
+  }
+}
+#studentNumber_size {
+  font-size: 16px;
+}
+
+.btn-large {
+  margin-top: 45px;
+}
+
+@media only screen and (max-height: 760px) {
+  .btn-large {
+    margin-top: 0px;
+  }
+}
+
+.marginTop {
+  margin-top: 80px;
+}
+
+@media only screen and (max-height: 760px) {
+  .marginTop {
+    margin-top: 45px;
+  }
+}
+
+.fa {
+  color: #37474f;
+}
+
+.fa:hover {
+  color: #ff8f00;
+}
+
+.btn-flat {
+    margin-left: 110px; /*110px*/
+    /*font-size: 90%;*/
+    color: #ffa726;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.btn-flat:hover {
+    color: #ffa726;
+    background-color: rgba(0,0,0,0.5);
+}
+
+@media only screen and (max-height: 760px) {
+  .btn-flat {
+    margin-left: 50px; /*110px*/
+    /*font-size: 90%;*/
+    color: #ffa726;
+    background-color: rgba(0,0,0,0.3);
+  }
+}
+
+@media only screen and (min-height: 900px) and (max-height: 1080px) {
+  .btn-flat {
+    margin-left: 120px; /*110px*/
+    /*font-size: 90%;*/
+    color: #ffa726;
+    background-color: rgba(0,0,0,0.3);
+  }
+}
+.modal .modal-footer .btn-flat {
+  color: #424242;
+  float: none;
+  background-color: rgba(0,0,0,0.1);
+}
+.modal .modal-footer .btn-flat:hover {
+  color: #424242;
+  background-color: rgba(0,0,0,0.3);
+}
+/*.modal-btn {
+  color: #424242;
+  background-color: rgba(0,0,0,0.1);
+}
+.modal-btn:hover {
+  color: #424242;
+  background-color: rgba(0,0,0,0.2);
+}*/
+#retake-pic {
+   margin-left: 180px;
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+  color: #37474f;
+}
+.dropdown-content li:hover, .dropdown-content li.active, .dropdown-content li.selected {
+  background-color: #eee;/*#eee*/
+  color: #ff8f00;
+}
+
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #ff8f00;
+  box-shadow: 0 1px 0 0 #ff8f00;
+}
+
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:focus:not([readonly]) + label,
+input[type=password]:focus:not([readonly]) + label,
+input[type=email]:focus:not([readonly]) + label,
+input[type=url]:focus:not([readonly]) + label,
+input[type=time]:focus:not([readonly]) + label,
+input[type=date]:focus:not([readonly]) + label,
+input[type=datetime]:focus:not([readonly]) + label,
+input[type=datetime-local]:focus:not([readonly]) + label,
+input[type=tel]:focus:not([readonly]) + label,
+input[type=number]:focus:not([readonly]) + label,
+input[type=search]:focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #ff8f00;
+}
+
+
+
+
+#canvasID{
+  display: none;
+  /*max-width: 100%;*/
+  /*width: 520;
+  height: 390;*/
+}
+.modal {
+  width: 40%;
+}
+.side-nav {
+  margin-top: 4.25em;
+}

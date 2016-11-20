@@ -1,0 +1,1 @@
+web: gunicorn snapLog.wsgi --log-file -

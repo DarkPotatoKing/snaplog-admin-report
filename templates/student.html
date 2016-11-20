@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SnapLog</title>
+  <!-- Import Google Icon Font -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Import Font Awesome -->
+  <link rel="stylesheet" type="text/css" href="../static/fontAwesome/css/font-awesome.min.css" media="screen,projection">
+ <!-- Import materialize css -->
+  <link rel="stylesheet" type="text/css" href="../static/css/materialize.min.css" media="screen,projection">
+  <!-- Import styles.css -->
+  <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta charset="utf-8">
+  <meta name="keywords" content="SnapLog">
+  
+</head>
+
+<body>
+  <!-- Banner/Navbar -->
+  <nav>
+    <div class="nav-wrapper blue-grey darken-2">
+        <a href="/" class="brand-logo center">
+        <img class="logo-holder" src="../static/icons/iconv2.png" id="snaplog_logo">
+        </a>
+    </div>
+  </nav>
+  <!-- End of Banner/Navbar-->
+
+  <!-- Student Form -->
+  <div class="container">
+    <div class="row valign-wrapper">
+      <div class="col s12 center-align">
+        <div class="col s12 center-align">
+            <h5 id="date_time"></h5>
+            
+        </div>
+      </div>
+    </div>
+    <div class="row valign-wrapper marginTop">
+      <!-- Back Button-->
+      <div class="col s1 center-align">
+        <a onclick="history.back();"><i class="fa fa-angle-left fa-5x" aria-hidden="true"></i></a>
+      </div>
+      <!-- End of Back Button -->
+
+      <!-- Picture-->
+      <div class="col s5 center-align">
+        <div class="row">
+          <div class="col s12">
+            <div class="card">
+              <div class="card-image">
+                <video class="responsive-video" id="camera-stream" autoplay></video>
+                <canvas  id="canvasID" width="520" height="390"></canvas>  
+                
+                <!--<img class="responsive-img" src="../static/icons/default-avatar.png"> -->
+                <span class="card-title"><a id="take-pic" class="btn-flat">TAKE A PICTURE</a></span>
+                 <span class="card-title"><a id="retake-pic" class="btn-flat">RETAKE</a></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of Picture-->
+
+      <!-- Text Form-->
+      <form class="col s6" action="/student/" id="studentForm"  autocomplete="off" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+        <div class="row">
+          {% if error_message %}<p id="error" style="color: red"><strong>{{ error_message }}</strong></p>{% endif %}
+          <div class="input-field col s6">
+            <input id="first_name" type="text" autocomplete="off" name="first_name" class="validate" required>
+            <label for="first_name">First Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="last_name" type="text" autocomplete="off" name="last_name" class="validate" required>
+            <label for="last_name">Last Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="20xxxxxxx" pattern="^[0-9]{9}$" id="student_number" type="password" name="student_number" autocomplete="off" title="Enter 9 characters" class="validate" required>
+            <label for="student_number" id="studentNumber_size">Student Number</label>
+            <input type="hidden" id="myTimeIn" name="myTimeIn" value="">
+            <input type="hidden" id="myPic" name="myPic" value="">
+            <input type="hidden" id="myPicName" name="myPicName" value="">
+          </div>
+        </div>
+      </form>
+      <!-- End of Text Form-->
+    </div>
+    <!-- Submit Button -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <button class="btn-large waves-effect waves-light" name="action" id="submitButton">Submit
+         <!--  <i class="material-icons right"></i> -->
+        </button>
+      </div>
+    </div>
+    <!-- End of Submit Button -->
+  </div>
+  <!-- End of Student Form-->
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content center-align">
+      <h6>Logged in:</h6>
+      <h5 id="timeIn"></h5>
+    </div>
+    <div class="modal-footer center-align">
+      <button class=" modal-action modal-close waves-effect btn-flat" form="studentForm" type="submit" id="confirmButton">confirm</button>
+      <button class=" modal-action modal-close waves-effect btn-flat">cancel</button>
+    </div>
+  </div>
+<!-- Import jQuery and scripts before materialize.js  -->
+  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+  <script type="text/javascript" src="../static/jquery/jquery-3.1.0.min.js"></script>
+  <script type="text/javascript" src="../static/js/scripts.js"></script>
+  <script type="text/javascript" src="../static/js/materialize.min.js"></script>
+  <script type="text/javascript" src="../static/js/dateTime.js"></script>
+  <script type="text/javascript">window.onload = date_time('date_time');</script>      
+  <script src="../static/js/video.js"></script>  
+</body>
+</html>
